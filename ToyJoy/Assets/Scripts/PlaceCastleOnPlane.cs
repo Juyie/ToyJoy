@@ -10,9 +10,23 @@ public class PlaceCastleOnPlane : MonoBehaviour
     private ARRaycastManager raycastManager;
 
     [SerializeField]
+    private ARPlaneManager planeManager;
+
+    [SerializeField]
     private GameObject castle;
 
+    [SerializeField]
+    private GameObject ball;
+
     private GameObject spawnObject;
+    private GameObject ballObject;
+    private bool isSet = false;
+
+    public void StartButtonTouch()
+    {
+        isSet = true;
+        planeManager.enabled = false;
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -24,11 +38,16 @@ public class PlaceCastleOnPlane : MonoBehaviour
     void Update()
     {
         PlaceCastleByTouch();
+
+        if (isSet)
+        {
+            UpdateCenterObject();
+        }
     }
 
     private void PlaceCastleByTouch()
     {
-        if(Input.touchCount > 0)
+        if(Input.touchCount > 0 && !isSet)
         {
             Touch touch = Input.GetTouch(0);
 
@@ -37,14 +56,16 @@ public class PlaceCastleOnPlane : MonoBehaviour
             {
                 Pose hitPose = hits[0].pose;
 
-                if (!spawnObject)
+                if (!castle.activeSelf)
                 {
-                    spawnObject = Instantiate(castle, hitPose.position, hitPose.rotation);
+                    castle.SetActive(true);
+                    castle.transform.position = hitPose.position;
+                    castle.transform.rotation = hitPose.rotation;
                 }
                 else
                 {
-                    spawnObject.transform.position = hitPose.position;
-                    spawnObject.transform.rotation = hitPose.rotation;
+                    castle.transform.position = hitPose.position;
+                    castle.transform.rotation = hitPose.rotation;
                 }
             }
         }
@@ -54,18 +75,30 @@ public class PlaceCastleOnPlane : MonoBehaviour
     {
         Vector3 screenCenter = Camera.current.ViewportToScreenPoint(new Vector3(0.5f, 0, 0.5f));
 
+        /*
         List<ARRaycastHit> hits = new List<ARRaycastHit>();
         raycastManager.Raycast(screenCenter, hits, TrackableType.Planes);
 
         if(hits.Count > 0)
         {
             Pose placementPose = hits[0].pose;
-            castle.SetActive(true);
-            castle.transform.SetPositionAndRotation(placementPose.position + new Vector3(0, 0, 0.3f), placementPose.rotation);
+            ball.SetActive(true);
+            ball.transform.SetPositionAndRotation(placementPose.position + new Vector3(0, 0, 0.3f), placementPose.rotation);
         }
         else
         {
-            castle.SetActive(false);
+            ball.SetActive(false);
+        }
+        */
+
+        if (!ball.activeSelf)
+        {
+            ball.SetActive(true);
+            ball.transform.parent = GameObject.FindWithTag("MainCamera").transform;
+            ball.transform.localPosition = new Vector3(0f, 0, 0.5f);
+        }
+        else
+        {
         }
     }
 }
