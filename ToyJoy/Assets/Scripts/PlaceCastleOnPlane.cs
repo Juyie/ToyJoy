@@ -75,30 +75,11 @@ public class PlaceCastleOnPlane : MonoBehaviour
     {
         Vector3 screenCenter = Camera.current.ViewportToScreenPoint(new Vector3(0.5f, 0, 0.5f));
 
-        /*
-        List<ARRaycastHit> hits = new List<ARRaycastHit>();
-        raycastManager.Raycast(screenCenter, hits, TrackableType.Planes);
-
-        if(hits.Count > 0)
-        {
-            Pose placementPose = hits[0].pose;
-            ball.SetActive(true);
-            ball.transform.SetPositionAndRotation(placementPose.position + new Vector3(0, 0, 0.3f), placementPose.rotation);
-        }
-        else
-        {
-            ball.SetActive(false);
-        }
-        */
-
         if (!ball.activeSelf)
         {
             ball.SetActive(true);
             ball.transform.parent = GameObject.FindWithTag("MainCamera").transform;
             ball.transform.localPosition = new Vector3(0f, 0, 0.5f);
-        }
-        else
-        {
         }
     }
 }
