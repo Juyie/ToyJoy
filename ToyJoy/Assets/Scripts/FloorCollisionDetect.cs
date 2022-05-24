@@ -24,24 +24,22 @@ public class FloorCollisionDetect : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if(collision.rigidbody.velocity.y > 0)
-        {
-            text.text = collision.transform.name;
-            StartCoroutine("DestroyBlock", collision.transform.gameObject);
-        }
-
-        /*
         if (!first)
         {
-            new WaitForSeconds(2f);
-            first = true;
+            StartCoroutine("WaitForReady");
         }
-        if (first)
+        if (first && collision.transform.tag != "Ball")
         {
+            // This
             text.text = collision.transform.name;
             StartCoroutine("DestroyBlock", collision.transform.gameObject);
         }
-        */
+    }
+
+    IEnumerator WaitForReady()
+    {
+        yield return new WaitForSeconds(2f);
+        first = true;
     }
 
     IEnumerator DestroyBlock(GameObject block)
