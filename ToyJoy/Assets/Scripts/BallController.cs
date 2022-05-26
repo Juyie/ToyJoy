@@ -29,6 +29,7 @@ public class BallController : MonoBehaviour
         if ((Input.touchCount == 1 || Input.GetMouseButtonDown(0)) && !isTouched)
         {
             isTouched = true;
+            transform.parent = null;
             ballRigidbody.useGravity = true;
             ballRigidbody.isKinematic = false;
             ballRigidbody.velocity = cam.transform.rotation * new Vector3(0, 1, 1) * ballThrowingForce;
