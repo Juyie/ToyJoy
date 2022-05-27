@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class FloorCollisionDetect : MonoBehaviour
+public class FloorCollisionDetectForStage1 : MonoBehaviour
 {
     public bool isFeverTime = false;
     public int countToy = 0;
@@ -38,7 +38,7 @@ public class FloorCollisionDetect : MonoBehaviour
             // collision detect
             if (collision.collider.gameObject.CompareTag("Block"))
             {
-                PlayerPrefs.SetInt("Score", PlayerPrefs.GetInt("Score") + 20);
+                PlayerPrefs.SetInt("Stage1Score", PlayerPrefs.GetInt("Stage1Score") + 20);
 
                 countBlock++;
                 GetOrder(collision.collider.gameObject);
@@ -52,11 +52,11 @@ public class FloorCollisionDetect : MonoBehaviour
             {
                 if (isFeverTime)
                 {
-                    PlayerPrefs.SetInt("Score", PlayerPrefs.GetInt("Score") + 80);
+                    PlayerPrefs.SetInt("Stage1Score", PlayerPrefs.GetInt("Stage1Score") + 80);
                 }
                 else
                 {
-                    PlayerPrefs.SetInt("Score", PlayerPrefs.GetInt("Score") + 40);
+                    PlayerPrefs.SetInt("Stage1Score", PlayerPrefs.GetInt("Stage1Score") + 40);
 
                 }
                 countToy++;

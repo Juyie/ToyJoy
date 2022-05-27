@@ -6,6 +6,12 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/Launcher.unity
+    guid: acee12ada70f2a8488c900e81acc3d55
+  - enabled: 1
+    path: Assets/Scenes/ChooseStage.unity
+    guid: a8ff722c01a794a4ebf91b176be04648
+  - enabled: 1
     path: Assets/Scenes/Stage1.unity
     guid: ecddad7a6edc54d9f8ce0f5130a0f48e
   - enabled: 1
@@ -14,6 +20,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Stage3.unity
     guid: e0e4ae146df6b42f28796fcc84b45bef
+  - enabled: 1
+    path: Assets/Scenes/Score.unity
+    guid: a01a6023937b82c429a80a398367054e
   m_configObjects:
     Unity.XR.WindowsMR.Settings: {fileID: 11400000, guid: 744b813df90924c169af73489b8325de,
       type: 2}

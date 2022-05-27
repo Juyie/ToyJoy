@@ -7,6 +7,7 @@ TagManager:
   - Ball
   - Block
   - Toy
+  - WarningToy
   layers:
   - Default
   - TransparentFX
