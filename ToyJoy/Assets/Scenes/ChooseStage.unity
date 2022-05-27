@@ -430,7 +430,7 @@ GameObject:
   - component: {fileID: 64977250}
   - component: {fileID: 64977249}
   m_Layer: 5
-  m_Name: start2
+  m_Name: star2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -505,7 +505,7 @@ GameObject:
   - component: {fileID: 80582108}
   - component: {fileID: 80582107}
   m_Layer: 5
-  m_Name: start2
+  m_Name: star2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -580,7 +580,7 @@ GameObject:
   - component: {fileID: 180700723}
   - component: {fileID: 180700722}
   m_Layer: 5
-  m_Name: start3
+  m_Name: star3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -942,7 +942,7 @@ GameObject:
   - component: {fileID: 556173924}
   - component: {fileID: 556173923}
   m_Layer: 5
-  m_Name: start5
+  m_Name: star5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1017,7 +1017,7 @@ GameObject:
   - component: {fileID: 617345738}
   - component: {fileID: 617345737}
   m_Layer: 5
-  m_Name: start4
+  m_Name: star4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1404,7 +1404,7 @@ GameObject:
   - component: {fileID: 927810430}
   - component: {fileID: 927810429}
   m_Layer: 5
-  m_Name: start2
+  m_Name: star2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1558,7 +1558,7 @@ GameObject:
   - component: {fileID: 944860637}
   - component: {fileID: 944860636}
   m_Layer: 5
-  m_Name: start4
+  m_Name: star4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2215,7 +2215,7 @@ GameObject:
   - component: {fileID: 1489327829}
   - component: {fileID: 1489327828}
   m_Layer: 5
-  m_Name: start5
+  m_Name: star5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2288,7 +2288,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1499599135}
   m_Layer: 5
-  m_Name: starts
+  m_Name: stars
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2328,7 +2328,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1504830047}
   m_Layer: 5
-  m_Name: starts
+  m_Name: start
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2819,7 +2819,7 @@ GameObject:
   - component: {fileID: 1712414704}
   - component: {fileID: 1712414703}
   m_Layer: 5
-  m_Name: start3
+  m_Name: star3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2892,7 +2892,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1764198032}
   m_Layer: 5
-  m_Name: starts
+  m_Name: stars
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2934,7 +2934,7 @@ GameObject:
   - component: {fileID: 1773839523}
   - component: {fileID: 1773839522}
   m_Layer: 5
-  m_Name: start4
+  m_Name: star4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3113,7 +3113,7 @@ GameObject:
   - component: {fileID: 2028220170}
   - component: {fileID: 2028220169}
   m_Layer: 5
-  m_Name: start3
+  m_Name: star3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
