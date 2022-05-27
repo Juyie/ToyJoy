@@ -1236,7 +1236,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ballThrowingForce: 3
-  totalBallCount: 5
+  totalBallCount: 7
 --- !u!135 &1287990964
 SphereCollider:
   m_ObjectHideFlags: 0
