@@ -47,7 +47,6 @@ public class FloorCollisionDetect : MonoBehaviour
                 {
                     isFeverTime = true;
                 }
-
             }
             else if (collision.collider.gameObject.CompareTag("Toy"))
             {
@@ -67,10 +66,9 @@ public class FloorCollisionDetect : MonoBehaviour
                 {
                     //load scoreScene
                 }
-
             }
 
-            text.text = collision.transform.name;
+            //text.text = collision.transform.name;
             StartCoroutine("DestroyBlock", collision.transform.gameObject);
         }
     }
