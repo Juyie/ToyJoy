@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+
 
 public class BallController : MonoBehaviour
 {
@@ -34,7 +36,11 @@ public class BallController : MonoBehaviour
             ballRigidbody.isKinematic = false;
             ballRigidbody.velocity = cam.transform.rotation * new Vector3(0, 1, 1) * ballThrowingForce;
             ballCount++;
-            if(ballCount < totalBallCount)
+            if (ballCount == totalBallCount)
+            {
+                Invoke("LoadScoreScene",3);
+            }
+            if (ballCount < totalBallCount)
             {
                 Invoke("RespawnBall", 3);
             }
@@ -49,5 +55,10 @@ public class BallController : MonoBehaviour
         ballRigidbody.velocity = new Vector3(0, 0, 0);
         transform.parent = cam.transform;
         transform.localPosition = new Vector3(0f, 0, 0.5f);
+    }
+
+    private void LoadScoreScene()
+    {
+        SceneManager.LoadScene("Score");
     }
 }

@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class FloorCollisionDetectForStage1 : MonoBehaviour
 {
@@ -64,7 +65,7 @@ public class FloorCollisionDetectForStage1 : MonoBehaviour
                 playerManager.UpdateScore();
                 if (countToy == 2)
                 {
-                    //load scoreScene
+                    SceneManager.LoadScene("Score");
                 }
             }
 

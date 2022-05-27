@@ -7,6 +7,9 @@ using UnityEngine.SceneManagement;
 public class StageChoose : MonoBehaviour
 {
     public GameObject[] panels;
+    public GameObject[] stage1StarPanels;
+    public GameObject[] stage2StarPanels;
+    public GameObject[] stage3StarPanels;
     public int nowSee;
     public Text lastScoreUIForStage1;
     public Text lastScoreUIForStage2;
@@ -32,6 +35,7 @@ public class StageChoose : MonoBehaviour
 
     void Start()
     {
+        ChangeStars();
         lastScoreUIForStage1.text = "High Score:" + PlayerPrefs.GetInt("Stage1lastScore") + "";
         lastScoreUIForStage2.text = "High Score:" + PlayerPrefs.GetInt("Stage2lastScore") + "";
         lastScoreUIForStage3.text = "High Score:" + PlayerPrefs.GetInt("Stage3lastScore") + "";
@@ -93,5 +97,86 @@ public class StageChoose : MonoBehaviour
     {
         PlayerPrefs.SetInt("Stage", 3);
         SceneManager.LoadScene("Stage3");
+    }
+
+    public void ChangeStars()
+    {
+        GetStarCount(1, PlayerPrefs.GetInt("Stage1lastScore"));
+        GetStarCount(2, PlayerPrefs.GetInt("Stage2lastScore"));
+        GetStarCount(3, PlayerPrefs.GetInt("Stage3lastScore"));
+    }
+
+    public void GetStarCount(int stage,int num)
+    {
+        if (stage == 1)
+        {
+            if (num >= 44)
+            {
+                stage1StarPanels[0].GetComponent<Image>().color = Color.yellow;
+            }
+            if(num >= 88)
+            {
+                stage1StarPanels[1].GetComponent<Image>().color = Color.yellow;
+            }
+            if(num >= 132)
+            {
+                stage1StarPanels[2].GetComponent<Image>().color = Color.yellow;
+            }
+            if (num >= 176)
+            {
+                stage1StarPanels[3].GetComponent<Image>().color = Color.yellow;
+            }
+            if (num >= 220)
+            {
+                stage1StarPanels[4].GetComponent<Image>().color = Color.yellow;
+            }
+
+        }else if(stage == 2)
+        {
+            if (num >= 64)
+            {
+                stage2StarPanels[0].GetComponent<Image>().color = Color.yellow;
+            }
+            if (num >= 128)
+            {
+                stage2StarPanels[1].GetComponent<Image>().color = Color.yellow;
+            }
+            if (num >= 192)
+            {
+                stage2StarPanels[2].GetComponent<Image>().color = Color.yellow;
+            }
+            if (num >= 256)
+            {
+                stage2StarPanels[3].GetComponent<Image>().color = Color.yellow;
+            }
+            if (num >= 320)
+            {
+                stage2StarPanels[4].GetComponent<Image>().color = Color.yellow;
+            }
+        }
+        else
+        {
+            if (num >= 80)
+            {
+                stage3StarPanels[0].GetComponent<Image>().color = Color.yellow;
+            }
+            if (num >= 160)
+            {
+                stage3StarPanels[1].GetComponent<Image>().color = Color.yellow;
+            }
+            if (num >= 240)
+            {
+                stage3StarPanels[2].GetComponent<Image>().color = Color.yellow;
+            }
+            if (num >= 320)
+            {
+                stage3StarPanels[3].GetComponent<Image>().color = Color.yellow;
+            }
+            if (num >= 400)
+            {
+                stage3StarPanels[4].GetComponent<Image>().color = Color.yellow;
+            }
+        }
+        
     }
 }

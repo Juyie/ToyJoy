@@ -1032,7 +1032,6 @@ MonoBehaviour:
   - {fileID: 1982034223}
   - {fileID: 1940492298}
   score: {fileID: 796802737}
-  shootChance: 7
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -1594,6 +1593,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4922741555828984725, guid: f5e36a01e798b8345b96a40ed537bf62,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ball
       objectReference: {fileID: 0}
     - target: {fileID: 8217466799263545734, guid: f5e36a01e798b8345b96a40ed537bf62,
         type: 3}

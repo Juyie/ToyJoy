@@ -1008,7 +1008,6 @@ MonoBehaviour:
   - {fileID: 2065044709}
   - {fileID: 1485070868}
   score: {fileID: 821533306}
-  shootChance: 10
 --- !u!54 &628461292 stripped
 Rigidbody:
   m_CorrespondingSourceObject: {fileID: 3009027960901253978, guid: e4a1aaee617bb0846b4df7076478f093,
@@ -2179,6 +2178,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 371e9db7876995147bceca5c0aa742ef,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ball
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 371e9db7876995147bceca5c0aa742ef, type: 3}
