@@ -15,6 +15,8 @@ public class StageChoose : MonoBehaviour
     public Text lastScoreUIForStage2;
     public Text lastScoreUIForStage3;
 
+    private GameObject BGM;
+
     public enum ActivePanel
     {
         STAGE1 = 0,
@@ -41,6 +43,7 @@ public class StageChoose : MonoBehaviour
         lastScoreUIForStage3.text = "High Score:" + PlayerPrefs.GetInt("Stage3lastScore") + "";
         ChangePanel(ActivePanel.STAGE1);
         nowSee = 0;
+        BGM = GameObject.FindWithTag("BGM");
     }
 
     public void RightChangeStage()
@@ -83,18 +86,21 @@ public class StageChoose : MonoBehaviour
 
     public void Stage1()
     {
+        Destroy(BGM);
         PlayerPrefs.SetInt("Stage", 1);
         SceneManager.LoadScene("Stage1");
     }
 
     public void Stage2()
     {
+        Destroy(BGM);
         PlayerPrefs.SetInt("Stage", 2);
         SceneManager.LoadScene("Stage2");
     }
 
     public void Stage3()
     {
+        Destroy(BGM);
         PlayerPrefs.SetInt("Stage", 3);
         SceneManager.LoadScene("Stage3");
     }

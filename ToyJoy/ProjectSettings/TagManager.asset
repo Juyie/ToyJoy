@@ -8,6 +8,7 @@ TagManager:
   - Block
   - Toy
   - WarningToy
+  - BGM
   layers:
   - Default
   - TransparentFX
