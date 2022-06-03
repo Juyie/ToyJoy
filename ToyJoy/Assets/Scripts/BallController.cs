@@ -18,6 +18,12 @@ public class BallController : MonoBehaviour
     private bool isTouched = false;
     private int ballCount = 0;
 
+    [SerializeField]
+    private AudioSource audioSource;
+
+    [SerializeField]
+    private AudioSource audioSourceCollision;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -30,6 +36,7 @@ public class BallController : MonoBehaviour
     {
         if ((Input.touchCount == 1 || Input.GetMouseButtonDown(0)) && !isTouched)
         {
+            audioSource.Play();
             isTouched = true;
             transform.parent = null;
             ballRigidbody.useGravity = true;
@@ -60,5 +67,13 @@ public class BallController : MonoBehaviour
     private void LoadScoreScene()
     {
         SceneManager.LoadScene("Score");
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if(collision.collider.gameObject.CompareTag("Block") || collision.collider.gameObject.CompareTag("Toy"))
+        {
+            audioSourceCollision.Play();
+        }
     }
 }

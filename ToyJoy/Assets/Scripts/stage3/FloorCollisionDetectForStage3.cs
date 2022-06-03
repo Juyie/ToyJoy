@@ -16,6 +16,15 @@ public class FloorCollisionDetectForStage3 : MonoBehaviour
 
     private bool first = false;
 
+    [SerializeField]
+    private AudioSource audioSourceBGM;
+
+    [SerializeField]
+    private AudioClip feverClip;
+
+    [SerializeField]
+    private AudioSource audioSourceBlockUI;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -41,12 +50,18 @@ public class FloorCollisionDetectForStage3 : MonoBehaviour
             {
                 PlayerPrefs.SetInt("Stage3Score", PlayerPrefs.GetInt("Stage3Score") + 20);
 
+                audioSourceBlockUI.Play();
                 countBlock++;
                 GetOrder(collision.collider.gameObject);
                 playerManager.UpdateScore();
                 if (countBlock == 4)
                 {
                     isFeverTime = true;
+                    if (audioSourceBGM.clip != feverClip)
+                    {
+                        audioSourceBGM.clip = feverClip;
+                        audioSourceBGM.Play();
+                    }
                 }
             }
             else if (collision.collider.gameObject.CompareTag("Toy"))
