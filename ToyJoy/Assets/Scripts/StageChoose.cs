@@ -17,6 +17,8 @@ public class StageChoose : MonoBehaviour
 
     private GameObject BGM;
 
+    public Sprite yellowStar;
+
     public enum ActivePanel
     {
         STAGE1 = 0,
@@ -118,69 +120,69 @@ public class StageChoose : MonoBehaviour
         {
             if (num >= 44)
             {
-                stage1StarPanels[0].GetComponent<Image>().color = Color.yellow;
+                stage1StarPanels[0].GetComponent<Image>().sprite = yellowStar;
             }
             if(num >= 88)
             {
-                stage1StarPanels[1].GetComponent<Image>().color = Color.yellow;
+                stage1StarPanels[1].GetComponent<Image>().sprite = yellowStar;
             }
             if(num >= 132)
             {
-                stage1StarPanels[2].GetComponent<Image>().color = Color.yellow;
+                stage1StarPanels[2].GetComponent<Image>().sprite = yellowStar;
             }
             if (num >= 176)
             {
-                stage1StarPanels[3].GetComponent<Image>().color = Color.yellow;
+                stage1StarPanels[3].GetComponent<Image>().sprite = yellowStar;
             }
             if (num >= 220)
             {
-                stage1StarPanels[4].GetComponent<Image>().color = Color.yellow;
+                stage1StarPanels[4].GetComponent<Image>().sprite = yellowStar;
             }
 
         }else if(stage == 2)
         {
             if (num >= 64)
             {
-                stage2StarPanels[0].GetComponent<Image>().color = Color.yellow;
+                stage2StarPanels[0].GetComponent<Image>().sprite = yellowStar;
             }
             if (num >= 128)
             {
-                stage2StarPanels[1].GetComponent<Image>().color = Color.yellow;
+                stage2StarPanels[1].GetComponent<Image>().sprite = yellowStar;
             }
             if (num >= 192)
             {
-                stage2StarPanels[2].GetComponent<Image>().color = Color.yellow;
+                stage2StarPanels[2].GetComponent<Image>().sprite = yellowStar;
             }
             if (num >= 256)
             {
-                stage2StarPanels[3].GetComponent<Image>().color = Color.yellow;
+                stage2StarPanels[3].GetComponent<Image>().sprite = yellowStar;
             }
             if (num >= 320)
             {
-                stage2StarPanels[4].GetComponent<Image>().color = Color.yellow;
+                stage2StarPanels[4].GetComponent<Image>().sprite = yellowStar;
             }
         }
         else
         {
             if (num >= 80)
             {
-                stage3StarPanels[0].GetComponent<Image>().color = Color.yellow;
+                stage3StarPanels[0].GetComponent<Image>().sprite = yellowStar;
             }
             if (num >= 160)
             {
-                stage3StarPanels[1].GetComponent<Image>().color = Color.yellow;
+                stage3StarPanels[1].GetComponent<Image>().sprite = yellowStar;
             }
             if (num >= 240)
             {
-                stage3StarPanels[2].GetComponent<Image>().color = Color.yellow;
+                stage3StarPanels[2].GetComponent<Image>().sprite = yellowStar;
             }
             if (num >= 320)
             {
-                stage3StarPanels[3].GetComponent<Image>().color = Color.yellow;
+                stage3StarPanels[3].GetComponent<Image>().sprite = yellowStar;
             }
             if (num >= 400)
             {
-                stage3StarPanels[4].GetComponent<Image>().color = Color.yellow;
+                stage3StarPanels[4].GetComponent<Image>().sprite = yellowStar;
             }
         }
         
