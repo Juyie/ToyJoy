@@ -7,11 +7,17 @@ public class Launcher : MonoBehaviour
 {
     public void GameStart()
     {
-        SceneManager.LoadScene("ChooseStage");
+        StartCoroutine("WaitAndGo");
     }
 
     public void GameExit()
     {
         Application.Quit();
+    }
+
+    IEnumerator WaitAndGo()
+    {
+        yield return new WaitForSeconds(0.5f);
+        SceneManager.LoadScene("ChooseStage");
     }
 }

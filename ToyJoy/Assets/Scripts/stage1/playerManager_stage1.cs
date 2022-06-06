@@ -33,15 +33,20 @@ public class playerManager_stage1 : MonoBehaviour
 
     public void ChangeBlockPanel(int num)
     {
-        blockPanels[0].GetComponent<Image>().sprite = block_t;
-        blockPanels[1].GetComponent<Image>().sprite = block_o;
-        blockPanels[2].GetComponent<Image>().sprite = block_p;
+        if(num == 0)
+            blockPanels[0].GetComponent<Image>().sprite = block_t;
+        else if(num == 1)
+            blockPanels[1].GetComponent<Image>().sprite = block_o;
+        else if(num == 2)
+            blockPanels[2].GetComponent<Image>().sprite = block_p;
     }
 
     public void ChangeToyPanel(int num)
     {
-        toyPanels[0].GetComponent<Image>().sprite = bunny;
-        toyPanels[1].GetComponent<Image>().sprite = bear;
+        if(num == 0)
+            toyPanels[0].GetComponent<Image>().sprite = bunny;
+        else if(num == 1)
+            toyPanels[1].GetComponent<Image>().sprite = bear;
     }
 
     public void UpdateScore()

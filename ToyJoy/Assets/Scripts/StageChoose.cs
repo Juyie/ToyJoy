@@ -90,21 +90,21 @@ public class StageChoose : MonoBehaviour
     {
         Destroy(BGM);
         PlayerPrefs.SetInt("Stage", 1);
-        SceneManager.LoadScene("Stage1");
+        StartCoroutine("WaitAndGo", "Stage1");
     }
 
     public void Stage2()
     {
         Destroy(BGM);
         PlayerPrefs.SetInt("Stage", 2);
-        SceneManager.LoadScene("Stage2");
+        StartCoroutine("WaitAndGo", "Stage2");
     }
 
     public void Stage3()
     {
         Destroy(BGM);
         PlayerPrefs.SetInt("Stage", 3);
-        SceneManager.LoadScene("Stage3");
+        StartCoroutine("WaitAndGo","Stage3");
     }
 
     public void ChangeStars()
@@ -186,5 +186,11 @@ public class StageChoose : MonoBehaviour
             }
         }
         
+    }
+
+    IEnumerator WaitAndGo(string sceneName)
+    {
+        yield return new WaitForSeconds(0.5f);
+        SceneManager.LoadScene(sceneName);
     }
 }

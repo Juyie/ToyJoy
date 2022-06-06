@@ -54,7 +54,7 @@ public class ScoreManager : MonoBehaviour
 
     public void ReturnToMain()
     {
-        SceneManager.LoadScene("Launcher");
+        StartCoroutine("WaitAndGo");
     }
 
     public void GetStarCount(int stage, int num)
@@ -130,5 +130,11 @@ public class ScoreManager : MonoBehaviour
             }
         }
 
+    }
+
+    IEnumerator WaitAndGo()
+    {
+        yield return new WaitForSeconds(0.5f);
+        SceneManager.LoadScene("Launcher");
     }
 }
