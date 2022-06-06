@@ -29,6 +29,8 @@ public class FloorCollisionDetectForStage3 : MonoBehaviour
     void Start()
     {
         playerManager = GameObject.Find("PlayerManager").GetComponent<playerManager_stage3>();
+        countBlock = 0;
+        countToy = 0;
     }
 
     // Update is called once per frame

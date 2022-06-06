@@ -10,6 +10,8 @@ public class ScoreManager : MonoBehaviour
     public Text lastScoreUI;
     public GameObject[] starPanels;
 
+    public Sprite yellowStar;
+
     private void Start()
     {
         if (PlayerPrefs.GetInt("Stage") == 1)
@@ -52,7 +54,7 @@ public class ScoreManager : MonoBehaviour
 
     public void ReturnToMain()
     {
-        SceneManager.LoadScene("Launcher");
+        StartCoroutine("WaitAndGo");
     }
 
     public void GetStarCount(int stage, int num)
@@ -61,23 +63,23 @@ public class ScoreManager : MonoBehaviour
         {
             if (num >= 44)
             {
-                starPanels[0].GetComponent<Image>().color = Color.yellow;
+                starPanels[0].GetComponent<Image>().sprite = yellowStar;
             }
             if (num >= 88)
             {
-                starPanels[1].GetComponent<Image>().color = Color.yellow;
+                starPanels[1].GetComponent<Image>().sprite = yellowStar;
             }
             if (num >= 132)
             {
-                starPanels[2].GetComponent<Image>().color = Color.yellow;
+                starPanels[2].GetComponent<Image>().sprite = yellowStar;
             }
             if (num >= 176)
             {
-                starPanels[3].GetComponent<Image>().color = Color.yellow;
+                starPanels[3].GetComponent<Image>().sprite = yellowStar;
             }
             if (num >= 220)
             {
-                starPanels[4].GetComponent<Image>().color = Color.yellow;
+                starPanels[4].GetComponent<Image>().sprite = yellowStar;
             }
 
         }
@@ -85,48 +87,54 @@ public class ScoreManager : MonoBehaviour
         {
             if (num >= 64)
             {
-                starPanels[0].GetComponent<Image>().color = Color.yellow;
+                starPanels[0].GetComponent<Image>().sprite = yellowStar;
             }
             if (num >= 128)
             {
-                starPanels[1].GetComponent<Image>().color = Color.yellow;
+                starPanels[1].GetComponent<Image>().sprite = yellowStar;
             }
             if (num >= 192)
             {
-                starPanels[2].GetComponent<Image>().color = Color.yellow;
+                starPanels[2].GetComponent<Image>().sprite = yellowStar;
             }
             if (num >= 256)
             {
-                starPanels[3].GetComponent<Image>().color = Color.yellow;
+                starPanels[3].GetComponent<Image>().sprite = yellowStar;
             }
             if (num >= 320)
             {
-                starPanels[4].GetComponent<Image>().color = Color.yellow;
+                starPanels[4].GetComponent<Image>().sprite = yellowStar;
             }
         }
         else
         {
             if (num >= 80)
             {
-                starPanels[0].GetComponent<Image>().color = Color.yellow;
+                starPanels[0].GetComponent<Image>().sprite = yellowStar;
             }
             if (num >= 160)
             {
-                starPanels[1].GetComponent<Image>().color = Color.yellow;
+                starPanels[1].GetComponent<Image>().sprite = yellowStar;
             }
             if (num >= 240)
             {
-                starPanels[2].GetComponent<Image>().color = Color.yellow;
+                starPanels[2].GetComponent<Image>().sprite = yellowStar;
             }
             if (num >= 320)
             {
-                starPanels[3].GetComponent<Image>().color = Color.yellow;
+                starPanels[3].GetComponent<Image>().sprite = yellowStar;
             }
             if (num >= 400)
             {
-                starPanels[4].GetComponent<Image>().color = Color.yellow;
+                starPanels[4].GetComponent<Image>().sprite = yellowStar;
             }
         }
 
+    }
+
+    IEnumerator WaitAndGo()
+    {
+        yield return new WaitForSeconds(0.5f);
+        SceneManager.LoadScene("Launcher");
     }
 }

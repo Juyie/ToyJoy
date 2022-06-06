@@ -10,6 +10,16 @@ public class playerManager_stage2 : MonoBehaviour
     public GameObject[] toyPanels;
     public Text score;
 
+    public Sprite block_l;
+    public Sprite block_o;
+    public Sprite block_v;
+    public Sprite block_e;
+
+    public Sprite bunny;
+    public Sprite bear;
+    public Sprite duck;
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -24,12 +34,24 @@ public class playerManager_stage2 : MonoBehaviour
 
     public void ChangeBlockPanel(int num)
     {
-        blockPanels[num].GetComponent<Image>().color = Color.white;
+        if(num == 0)
+            blockPanels[0].GetComponent<Image>().sprite = block_l;
+        else if(num == 1)
+            blockPanels[1].GetComponent<Image>().sprite = block_o;
+        else if (num == 2)
+            blockPanels[2].GetComponent<Image>().sprite = block_v;
+        else if (num == 3)
+            blockPanels[3].GetComponent<Image>().sprite = block_e;
     }
 
     public void ChangeToyPanel(int num)
     {
-        toyPanels[num].GetComponent<Image>().color = Color.white;
+        if (num == 0)
+            toyPanels[0].GetComponent<Image>().sprite = bunny;
+        else if (num == 1)
+            toyPanels[1].GetComponent<Image>().sprite = bear;
+        else if (num == 2)
+            toyPanels[2].GetComponent<Image>().sprite = duck;
     }
 
     public void UpdateScore()
